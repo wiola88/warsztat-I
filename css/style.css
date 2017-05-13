@@ -1,0 +1,524 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+main, article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects */
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+img,
+object,
+embed {max-width: 100%;}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted.
+	you'll have to restore the bullets within content,
+	which is fine because they're probably customized anyway */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: separate; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+.ie7 input[type="checkbox"] {vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+
+small {font-size: 85%;}
+
+strong {font-weight: bold;}
+
+td, td img {vertical-align: top;}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {width: auto; overflow: visible;}
+
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+
+/* let's clear some floats */
+.clearfix:after { content: " "; display: block; clear: both; }
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('transfonter.org-20170512-201522/Raleway-Regular.eot');
+	src: url('transfonter.org-20170512-201522/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+		url('transfonter.org-20170512-201522/Raleway-Regular.woff2') format('woff2'),
+		url('transfonter.org-20170512-201522/Raleway-Regular.woff') format('woff'),
+		url('transfonter.org-20170512-201522/Raleway-Regular.ttf') format('truetype'),
+		url('transfonter.org-20170512-201522/Raleway-Regular.svg#Raleway-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('transfonter.org-20170512-201522/Raleway-Bold.eot');
+	src: url('transfonter.org-20170512-201522/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+		url('transfonter.org-20170512-201522/Raleway-Bold.woff2') format('woff2'),
+		url('transfonter.org-20170512-201522/Raleway-Bold.woff') format('woff'),
+		url('transfonter.org-20170512-201522/Raleway-Bold.ttf') format('truetype'),
+		url('transfonter.org-20170512-201522/Raleway-Bold.svg#Raleway-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+html{
+	box-sizing: border-box;
+	font-family: "Raleway";
+}
+
+
+section {
+	width:100%;
+	overflow: hidden;
+
+}
+
+.container{
+	max-width:1200px;
+	margin:auto;
+	border: 1px solid red;
+
+	/*padding-left:;
+	padding-right:;
+	*/
+	overflow: hidden;
+}
+
+
+#logo{
+font-family: Raleway;
+font-size: 14px;
+line-height: 21px;
+text-transform: uppercase;
+color: #ffffff;
+font-weight: 600;
+float: left;
+position:absolute;
+padding:16px 1034px 14px 68px;
+}
+
+ #logo span{
+	color: #27c7ab;
+	font-weight: 800;
+}
+
+nav {
+width: 1200px;
+height: 41px;
+font-size: 14px;
+font-family: 'Ralevay', sans-serif;
+font-style: Bold;
+color:#ffffff;
+float: right;
+background-color: #000000;
+
+}
+
+li{
+	/*width: 64px;
+	height: 10px;*/
+	color: #ffffff;
+	font-family: Raleway;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 21px;
+	text-transform: uppercase;
+
+	float: right;
+
+	padding-top:17px;
+	padding-bottom: 14px;
+
+}
+
+ul{
+		padding-right:52px;
+}
+li:last-child{
+	padding-right:52px;
+}
+li:first-child{
+	padding-left:39px;
+
+}
+
+[class*="box"]{
+  float:left;
+	overflow: hidden;
+}
+
+[class^="glyphicon glyphicon-chevron"]{
+width: 34px;
+height: 42px;
+color: #24baa0;
+font-family: Raleway;
+font-size: 78px;
+font-weight: 300;
+line-height: 20px;
+}
+
+.arrow{
+height: 42px;
+position: relative;
+margin-top:241px;
+margin-bottom:217px;
+margin-left: 74px;
+margin-right: 74px;
+}
+.arrow_right{
+padding-left: 975px;
+position: absolute;
+}
+.arrow_left{
+position: absolute;
+}
+
+
+#ch_and_t{
+height: 500px;
+background-image: linear-gradient(to top, #d0cfd7 0%, #eeeef0 34%, #fafafa 100%);
+}
+
+.chair{
+	background-image:url("../images/black_chair.png");
+	width: 547px;
+	height: 346px;
+	position: absolute;
+margin: 107px 599px 47px 54px;
+}
+
+.row_sit_on{
+border: solid 1px blue;
+	position: absolute;
+	margin: 143px 257px 327px 590px;
+
+}
+
+h1{
+	/* Style for "SIT ON OUR" */
+font-family: Raleway;
+font-size: 40px;
+line-height: 20px;
+text-transform: uppercase;
+/* Text style for "SIT ,  OUR" */
+color: #000000;
+font-weight: 500;
+text-align: center;
+padding-top: 36px;
+
+}
+h1 span{
+	color: #24baa0;/* Text style for "ON, CHAIR" */
+	font-weight: 700;
+}
+
+.row_lorem{
+border: solid 1px blue;
+width:421px;
+height: 79px;
+/*styl czcionki*/
+color: #000000;
+font-family: Raleway;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+position: absolute;
+margin: 214px 221px 207px 558px;
+
+}
+.row_lorem p{
+text-align: center;
+}
+
+.row_button{
+	position: absolute;
+	margin: 326px 297px 122px 639px;
+}
+
+.button{
+width: 264px;
+height: 52px;
+border-radius: 10px;
+background-color: #24baa0;
+text-align: center;
+}
+.button:hover{
+ background-color: red;
+ opacity:0.3;
+}
+.button p{
+	color: #ffffff;
+	font-family: Raleway;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 20px;
+	text-transform: uppercase;
+padding-top: 19px;
+}
+
+* {
+box-sizing: border-box;
+
+}
+
+#photo{
+height: 354px;
+
+}
+
+
+
+
+
+
+
+#price_list{
+height: 725px;
+}
+
+
+
+
+#form{
+height: 653px;
+}
+
+
+
+
+
+/*
+#first {
+  background-image: url(../images/background.jpg);
+  height: 800px;
+}
+.container {
+  margin:0 auto;
+ width: 920px;
+ border:1px solid red;
+
+}
+
+header {
+	border:1px solid black;
+  overflow: hidden;
+}
+#logo {
+
+  display: block;
+
+}
+.nav {
+  clear: both;
+  color: black;
+  float: right;
+  display: inline-block;
+  overflow: hidden;
+    height: 80px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  vertical-align: middle;
+
+}
+li {
+  float:left;
+  padding: 25px;
+}
+
+.row {
+  overflow:hidden;
+padding-top: 27px;
+}
+
+.text h1 {
+  color:black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height:60px;
+  padding-bottom: 50px;
+}
+.text h3 {
+  color:black;
+  padding-top: 170px;
+  padding-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height:26px;
+}
+
+.button {
+  background-color: red;
+  width: 200px;
+  height: 70px;
+  border-radius: 5px;
+}
+.button p {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 20px;
+}
+.first {
+    width: 50%;
+    overflow: hidden;
+    float:left;
+}
+.box-50 {
+  font-family:  'Open Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 50px;
+  padding-top: 175px;
+  padding-bottom: 175px;
+
+}
+.box-49 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color:#b7b7b7;
+}
+#la {
+  padding-top: 125px;
+  padding-bottom: 26px;
+}
+#le {
+  padding-bottom: 125px;
+}
+.black {
+  background-color: black;
+clear: both;
+height: 400px;
+}
+
+.logo2 {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  width: 100px;
+  height: 20px;
+}
+.ttt {
+  width: 25%;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #353434;
+  float: left;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+#two {
+  line-height: 30px;
+}
